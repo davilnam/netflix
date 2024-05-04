@@ -75,14 +75,13 @@ button {
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 
 .header-content h1 {
     font-size: 60px;
     line-height: 70px;
     font-weight: 600;
-    max-width: 650px;
 }
 
 .header-content h3 {
@@ -277,6 +276,14 @@ input[type="radio"] {
     margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 992px){
+    .header-content{
+        width: 80%;
+    }
+    .header-content h1{
+        font-size: 54px;
+    }
+}
 
 
 @media only screen and (max-width: 600px) {
@@ -296,16 +303,23 @@ input[type="radio"] {
         position: unset;
         transform: none;
         padding-top: 150px;
+        width: 100%;
     }
 
     .header-content h1 {
         font-size: 30px;
+        line-height: normal;
     }
 
     .email-signup button {
         font-size: 12px;
         padding: 10px 15px;
     }
+
+    .email-signup input {
+        padding: 7px;
+        width: 60%;
+     }
 
     .text-col, .img-col {
         flex-basis: 100%;
