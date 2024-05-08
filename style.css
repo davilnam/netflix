@@ -10,6 +10,11 @@ body {
     color: #fff;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 .header {
     width: 100%;
     height: 100vh;
@@ -215,19 +220,22 @@ input[type="radio"] {
     background-color: #303030;
     text-align: left;
     padding: 0 20px;
-    max-height: 0;
-    overflow: hidden;
+    display: none;
     transition: max-height 0.5s, padding 0.5s;
 }
 
+.accordion input[type="radio"] {
+    display: none;
+}
+
 .accordion input[type="radio"]:checked + label + .content {
-    max-height: 600px;
+    display: block;
     padding: 30px 20px;
 }
 
-.accordion input[type="radio"]:checked + label::after {
+/* .accordion input[type="radio"]:checked + label::after {
     transform: rotate(135deg);
-}
+} */
 
 .faq .email-signup {
     max-width: 600px;
